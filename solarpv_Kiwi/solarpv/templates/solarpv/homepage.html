@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="{% static 'solarpv/homepage.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Pocket Monsters</title>
+        <header class="page-header header container-fluid">
+        </header>
+    </head>
+    <body> 
+        <div class="links">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <div class="us">
+            <p>About Us &nbsp; Contact Us</p>
+        </div>
+
+        <div class="tab">
+            <div class="center">
+                <button>Home</button>
+                <button>Pokedex</button>
+                <button>Video</button>
+                <button>Games and Apps</button>
+                <button>Trading Cards</button>
+                <button>Shop</button>
+            </div>
+        </div>
+        <div class="border">
+            <div class="menu">
+                <ul>
+                    <font face="verdana">
+                    <p class="sign">
+                        <a href="{% url 'registration' %}">Register</a>
+                        <a href="{% url 'login' %}">Login</a>
+                    </p>
+                    <p>Pokedex</p>
+                        <a href="https://pokemondb.net/pokedex/national#gen-1"><li>Generation 1</li></a>
+                        <a href="https://pokemondb.net/pokedex/national#gen-2"><li>Generation 2</li></a>
+                        <a href="https://pokemondb.net/pokedex/national#gen-3"><li>Generation 3</li></a>
+                    <p>Video</p>
+                        <a href="https://www.youtube.com/watch?v=D0zYJ1RQ-fs"><li>Pokemon: Mewtwo Strikes Back-Evolution</li></a>
+                        <a href="https://www.youtube.com/watch?v=4tU_D0e2auE"><li>Continue your journey together with the new Pokémon GO Buddy Adventure feature!</li></a>
+                        <a href="https://www.youtube.com/watch?v=Aj7ovGQuEow"><li>Pokémon TCG: Sun & Moon—Cosmic Eclipse has landed!</li></a>
+                        <a href="https://www.youtube.com/watch?v=rYDmL5VH-uk"><li>Pokémon: Twilight Wings | Episode 1 | Letter</li></a>
+                    <p>Games and Apps</p>
+                        <a href="https://swordshield.pokemon.com/en-us/"><li>Pokemon Sword and Shield</li></a>
+                        <a href="https://www.pokemongo.com/en-us/"><li>Pokemon Go</li></a>
+                    <p>Trading Cards</p>
+                    <p>Shop</p>
+                    </font>
+                </ul>
+            </div>
+
+            <div class="news">
+                <ul>
+                    <font face="verdana">
+                    <p>News & Events</p>
+                    <p>2020 Pokémon GO Live Events: Special Event during the Taiwan Lantern Festival, and Safari Zones in St. Louis, Liverpool, and Philadelphia</p>
+                    <p>Watch Ash’s Greatest(?) Triumphs in Pokémon the Series on Pokémon TV</p>
+                    <p>Battle Latias and Latios during a Special Raid Weekend January 24–27</p>
+                    <p>Pokémon GO Lunar New Year Event Features Darumaka, Minccino, and Shiny Gyarados</p>
+                    <p>Trade Evolution and more Pokémon originally discovered in Unova are here</p>
+                    <p>Party with Wurmple during the Adventure Sync Hatchathon</p>
+                    <p>Ringing in the new year with January events</p>
+                    <p>Updated January Community Day times for Northern and Southern Hemispheres</p>
+                    </font>
+                </ul>
+            </div>
+            <center><div class="gallery">
+                <font face="verdana" color="black">
+                <h3>Gallery</h3>
+                 <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="{% static 'solarpv/piplup.png' %}" style="width:15%">
+                    <div class="text"></div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="{% static 'solarpv/cacnea.png' %}" style="width:15%">
+                    <div class="text"></div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="{% static 'solarpv/mareep.png' %}" style="width:15%">
+                    <div class="text"></div>
+                    </div>
+                </div>
+                <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div> 
+                </font>
+            </div>
+            </center>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/NiEABxi8G4U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>    
+        <footer><font face="verdana">
+            <h3>Pocket Monsters</h3>
+            <p>8347 Random Avenue, Sherrill, NY 13461 <br>
+                Phone: (123) 456-7890 <br>
+                Email: pocketmonsters@nintendo.inc <br>
+                Website: www.pocketmonsters.com</p> 
+            <p>Site Map | Terms & Conditions | Privacy Policy | About Us | Copyright @ 2020</p> 
+            </font>
+        </footer>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+        </script>
+    </body>
+</html>
