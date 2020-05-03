@@ -25,7 +25,9 @@ SECRET_KEY = 'vbcq*^rh_wd0@y-vt8ywqu@h63c!a92y_t5a=qy2y)3jq9ts+y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*'
+]
 
 # Application definition
 
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'solarpv',
-    'backend'
+    'backend',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
